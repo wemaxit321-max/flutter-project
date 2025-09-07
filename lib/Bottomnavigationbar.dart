@@ -35,7 +35,7 @@ final pages =[
             items:[BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
               BottomNavigationBarItem(icon: Icon(Icons.video_collection_rounded), label: "Video"),
               BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline), label: "Create"),
-              BottomNavigationBarItem(icon: Icon(Icons.chat), label: "ChatBar"),
+              BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
               BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),]
           ,),
 
