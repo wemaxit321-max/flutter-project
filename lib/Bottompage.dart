@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/Notificationbar.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -12,6 +13,44 @@ class _HomeState extends State<Home> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Scaffold(
+       appBar:  AppBar(
+
+          actions: [
+            Stack(
+              children: [
+                IconButton(
+                  icon: Icon(Icons.notifications_rounded),
+                  onPressed: (){setState(() {
+                    Navigator.push(context,MaterialPageRoute(builder:(context)=>Notificationfile ()));
+                  });},
+                ),
+                // ---- Notification Badge ----
+                Positioned(
+                  right: 8,
+                  top: 8,
+                  child: Container(
+                    height: 12,
+                    width: 12,
+                    decoration: BoxDecoration(
+                      color: Colors.blue, // badge color
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "6", // notification count
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 8, // text size
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
         body: Text("this is a home"),
       ),
     );
@@ -34,6 +73,7 @@ class _VideofileState extends State<Videofile> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Scaffold(
+        appBar:AppBar(),
         body: Text("this is a video"),
       ),
     );
